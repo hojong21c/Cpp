@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "MyString.h"
 
+//테스트 함수
 void TestFunc(const CMyString& param)
 {
 	cout << "TestFunc : " << param.GetString() << endl;

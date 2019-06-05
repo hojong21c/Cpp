@@ -1,25 +1,42 @@
 #include "stdafx.h"
 #include "MyString.h"
 
-//기본 생성자 초기화
+//기본 생성자
 CMyString::CMyString() : m_pszData(NULL), m_nLength(0)
 {
 
 }
 
-//소멸자 메모리 해제
+//복사 생성자
+CMyString::CMyString(const CMyString& rhs) : m_pszData(NULL), m_nLength(0)
+{
+	this->SetString(rhs.GetString());
+}
+
+//변환 생성자
+CMyString::CMyString(const char* pszParam) : m_pszData(NULL), m_nLength(0)
+{
+	SetString(pszParam);
+}
+
+//이동 생성자
+CMyString::CMyString(CMyString&& rhs) : m_pszData(NULL), m_nLength(0)
+{
+	cout << "CMySTring 이동 생성자 호출" << endl;
+
+	m_pszData = rhs.m_pszData;
+	m_nLength = rhs.m_nLength;
+
+	rhs.m_pszData = NULL;
+	rhs.m_nLength = 0;
+}
+//소멸자 - 메모리 해제
 CMyString::~CMyString()
 {
 	Release();
 }
 
-//복사 생성자
-CMyString::CMyString(const CMyString &rhs) : m_pszData(NULL), m_nLength(0)
-{
-	this->SetString(rhs.GetString());
-}
-
-// 문자열 Set
+// 문자열 Setter
 int CMyString::SetString(const char* pszParam) 
 {
 	Release();
@@ -38,7 +55,7 @@ int CMyString::SetString(const char* pszParam)
 	return nLength;
 }
 
-// 문자열 Get
+// 문자열 Getter
 const char* CMyString::GetString() const
 {
 	return m_pszData;
