@@ -18,7 +18,7 @@ CMyString::CMyString(const char* pszParam) : m_pszData(NULL), m_nLength(0)
 
 CMyString::CMyString(CMyString&& rhs) : m_pszData(NULL), m_nLength(0)
 {
-	cout << "CMyString 이동 생성자 호출" << endl;
+	cout << "CMyString 이동 생성자" << endl;
 
 	m_pszData = rhs.m_pszData;
 	m_nLength = rhs.m_nLength;
@@ -32,7 +32,7 @@ CMyString::~CMyString()
 	Release();
 }
 
-int CMyString::SetString(const char* pszParam) 
+int CMyString::SetString(const char* pszParam)
 {
 	Release();
 	if (pszParam == NULL)
@@ -96,7 +96,7 @@ int CMyString::Append(const char* pszParam)
 	char* pszResult = new char[nLenCur + nLenParam + 1];
 
 	strcpy_s(pszResult, sizeof(char) * (nLenCur + 1), m_pszData);
-	strcpy_s(pszResult + (sizeof(char) * nLenCur), sizeof(char) *(nLenParam +1), pszParam);
+	strcpy_s(pszResult + (sizeof(char) * nLenCur), sizeof(char) * (nLenParam + 1), pszParam);
 
 	Release();
 	m_pszData = pszResult;
@@ -109,6 +109,14 @@ CMyString CMyString::operator+(const CMyString& rhs)
 {
 	CMyString strResult(m_pszData);
 	strResult.Append(rhs.GetString());
+
+	return strResult;
+}
+
+CMyString operator+(const char* pszParam, const CMyString& strParam)
+{
+	CMyString strResult(pszParam);
+	strResult.Append(strParam.m_pszData);
 
 	return strResult;
 }
