@@ -9,6 +9,10 @@ CMyStringEx::~CMyStringEx()
 {
 }
 
+CMyStringEx::CMyStringEx(const char* pszParam) : CMyString(pszParam)
+{
+
+}
 int CMyStringEx::Find(const char* pszParam)
 {
 	if (pszParam == NULL || GetString() == NULL)
@@ -19,4 +23,15 @@ int CMyStringEx::Find(const char* pszParam)
 		return pszResult - GetString();
 
 	return -1;
+}
+
+int CMyStringEx::SetString(const char* pszParam)
+{
+	int nResult;
+	if (strcmp(pszParam, "¸Û¸ÛÀÌ ¾Æµé") == 0)
+		nResult = CMyString::SetString("ÂøÇÑ»ç¶÷");
+	else
+		nResult = CMyString::SetString(pszParam);
+
+	return nResult;
 }
