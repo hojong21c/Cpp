@@ -123,12 +123,50 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="MyString.cpp" />
-    <ClCompile Include="StringCtrlSample.cpp" />
+    <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MyString.h" />
-    <ClInclude Include="stdafx.h" />
+    <ClCompile Include="Aggregation_Relationship.cpp" />
+    <ClCompile Include="AutoPtr_Shallow_Copy.cpp" />
+    <ClCompile Include="Auto_Pointer.cpp" />
+    <ClCompile Include="Class_Template.cpp" />
+    <ClCompile Include="Class_Template_Array.cpp" />
+    <ClCompile Include="Class_Template_Specialization.cpp" />
+    <ClCompile Include="Composition_Relation.cpp" />
+    <ClCompile Include="Dynamic_Cast.cpp" />
+    <ClCompile Include="Except_Allocation.cpp" />
+    <ClCompile Include="Except_Case1.cpp" />
+    <ClCompile Include="Except_Case2.cpp" />
+    <ClCompile Include="Except_Case3.cpp" />
+    <ClCompile Include="Except_Class.cpp" />
+    <ClCompile Include="Except_Stack.cpp" />
+    <ClCompile Include="Friend_Class.cpp" />
+    <ClCompile Include="Friend_Function.cpp" />
+    <ClCompile Include="Function_Object.cpp" />
+    <ClCompile Include="Function_Object_Sort.cpp" />
+    <ClCompile Include="Inherit_Of_Operator_Overloading.cpp" />
+    <ClCompile Include="Interface.cpp" />
+    <ClCompile Include="Interface_Multiple_Inheritance.cpp" />
+    <ClCompile Include="Lambda.cpp" />
+    <ClCompile Include="Lambda_Capture.cpp" />
+    <ClCompile Include="Lambda_Functional.cpp" />
+    <ClCompile Include="Lambda_Sort.cpp" />
+    <ClCompile Include="Multi_Catch.cpp" />
+    <ClCompile Include="Multi_Inheritance.cpp" />
+    <ClCompile Include="Pure_Virtual.cpp" />
+    <ClCompile Include="SelectConstructor.cpp" />
+    <ClCompile Include="Shared_Ptr.cpp" />
+    <ClCompile Include="Shared_Ptr_Array.cpp" />
+    <ClCompile Include="Static_Cast.cpp" />
+    <ClCompile Include="STL_String.cpp" />
+    <ClCompile Include="STL_Vector.cpp" />
+    <ClCompile Include="Template_Function_Specialization.cpp" />
+    <ClCompile Include="Template_Member_Declairation_Definition.cpp" />
+    <ClCompile Include="Template_Parameter.cpp" />
+    <ClCompile Include="Unique_Ptr.cpp" />
+    <ClCompile Include="Virtual_Destructor.cpp" />
+    <ClCompile Include="Virtual_Function.cpp" />
+    <ClCompile Include="Virtual_Table.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
