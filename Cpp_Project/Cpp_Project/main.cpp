@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "StringEx.h"
+#include "MyString.h"
 
 int _tmain(int argc, _TCHAR* argv[])
 {

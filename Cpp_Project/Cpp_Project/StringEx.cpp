@@ -11,9 +11,9 @@ StringEx::StringEx(const StringEx& rhs) : charactor_string(NULL), charactor_stri
 	this->SetCharString(rhs.GetCharString());
 }
 
-StringEx::StringEx(const char* pszParam) : charactor_string(NULL), charactor_string_length(0)
+StringEx::StringEx(const char* input_string) : charactor_string(NULL), charactor_string_length(0)
 {
-	SetCharString(pszParam);
+	SetCharString(input_string);
 }
 
 StringEx::StringEx(StringEx&& rhs) : charactor_string(NULL), charactor_string_length(0)
@@ -32,22 +32,22 @@ StringEx::~StringEx()
 	Release();
 }
 
-int StringEx::SetCharString(const char* pszParam)
+int StringEx::SetCharString(const char* input_string)
 {
 	Release();
-	if (pszParam == NULL)
+	if (input_string == NULL)
 		return 0;
 
-	int nLength = strlen(pszParam);
-	if (nLength == 0)
+	int input_string_length = strlen(input_string);
+	if (input_string_length == 0)
 		return 0;
 
-	charactor_string = new char[nLength + 1];
+	charactor_string = new char[input_string_length + 1];
 
-	strcpy_s(charactor_string, sizeof(char) * (nLength + 1), pszParam);
-	charactor_string_length = nLength;
+	strcpy_s(charactor_string, sizeof(char) * (input_string_length + 1), input_string);
+	charactor_string_length = input_string_length;
 
-	return nLength;
+	return input_string_length;
 }
 
 const char* StringEx::GetCharString() const
@@ -77,30 +77,30 @@ int StringEx::GetCharStringLength() const
 	return charactor_string_length;
 }
 
-int StringEx::Append(const char* pszParam)
+int StringEx::Append(const char* input_string)
 {
-	if (pszParam == NULL)
+	if (input_string == NULL)
 		return 0;
 
-	int nLenParam = strlen(pszParam);
-	if (nLenParam == 0)
+	int string_length_temp2 = strlen(input_string);
+	if (string_length_temp2 == 0)
 		return 0;
 
 	if (charactor_string == NULL)
 	{
-		SetCharString(pszParam);
+		SetCharString(input_string);
 		return charactor_string_length;
 	}
 
-	int nLenCur = charactor_string_length;
-	char* pszResult = new char[nLenCur + nLenParam + 1];
+	int string_length_temp1 = charactor_string_length;
+	char* pszResult = new char[string_length_temp1 + string_length_temp2 + 1];
 
-	strcpy_s(pszResult, sizeof(char) * (nLenCur + 1), charactor_string);
-	strcpy_s(pszResult + (sizeof(char) * nLenCur), sizeof(char) * (nLenParam + 1), pszParam);
+	strcpy_s(pszResult, sizeof(char) * (string_length_temp1 + 1), charactor_string);
+	strcpy_s(pszResult + (sizeof(char) * string_length_temp1), sizeof(char) * (string_length_temp2 + 1), input_string);
 
 	Release();
 	charactor_string = pszResult;
-	charactor_string_length = nLenCur + nLenParam;
+	charactor_string_length = string_length_temp1 + string_length_temp2;
 
 	return charactor_string_length;
 }
@@ -113,9 +113,9 @@ StringEx StringEx::operator+(const StringEx& rhs)
 	return strResult;
 }
 
-StringEx operator+(const char* pszParam, const StringEx& strParam)
+StringEx operator+(const char* input_string, const StringEx& strParam)
 {
-	StringEx strResult(pszParam);
+	StringEx strResult(input_string);
 	strResult.Append(strParam.charactor_string);
 
 	return strResult;

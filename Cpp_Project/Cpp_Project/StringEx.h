@@ -7,7 +7,7 @@ public: // 생성자
 	StringEx();
 	~StringEx();
 	StringEx(const StringEx& rhs);
-	explicit StringEx(const char* input_string);
+	explicit StringEx(const char* pszParam);
 	StringEx(StringEx&& rhs);
 
 private:
@@ -31,13 +31,13 @@ public://연산자 함수
 	}
 	// 문자열 처리
 	int GetCharStringLength() const;
-	int Append(const char* input_string);
+	int Append(const char* pszParam);
 
-	int SetCharString(const char* input_string);
+	int SetCharString(const char* pszParam);
 	const char* GetCharString() const;
 	void Release();
 
 	//friend 선언 -> private member 에 직접 접근
-	friend StringEx operator+(const char* input_string, const StringEx& strParam);
+	friend StringEx operator+(const char* pszParam, const StringEx& strParam);
 };
 
