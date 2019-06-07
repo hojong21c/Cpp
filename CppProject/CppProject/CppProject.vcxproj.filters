@@ -15,24 +15,27 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="StringCtrlSample.cpp">
+    <ClCompile Include="..\..\..\CppProject\CppProject\main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="MyString.cpp">
+    <ClCompile Include="..\..\..\CppProject\CppProject\P1String.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="MyStringEx.cpp">
+    <ClCompile Include="..\..\..\CppProject\CppProject\P2String.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\CppProject\CppProject\StringCtrlSample.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h">
+    <ClInclude Include="..\..\..\CppProject\CppProject\P1String.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="MyString.h">
+    <ClInclude Include="..\..\..\CppProject\CppProject\P2String.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="MyStringEx.h">
+    <ClInclude Include="..\..\..\CppProject\CppProject\stdafx.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
