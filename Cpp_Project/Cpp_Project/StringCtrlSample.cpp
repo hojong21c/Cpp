@@ -3,8 +3,8 @@
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	CMyString b("World"), c;
-	c = "Hello" + b;
+	StringEx b("Samuel"), c;
+	c = "Yun" + b;
 	cout << c << endl;
 
 	return 0;

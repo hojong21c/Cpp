@@ -1,38 +1,38 @@
 #include "stdafx.h"
 #include "MyString.h"
 
-CMyString::CMyString() : m_pszData(NULL), m_nLength(0)
+StringEx::StringEx() : charactor_string(NULL), charactor_string_length(0)
 {
 
 }
 
-CMyString::CMyString(const CMyString& rhs) : m_pszData(NULL), m_nLength(0)
+StringEx::StringEx(const StringEx& rhs) : charactor_string(NULL), charactor_string_length(0)
 {
-	this->SetString(rhs.GetString());
+	this->SetCharString(rhs.GetCharString());
 }
 
-CMyString::CMyString(const char* pszParam) : m_pszData(NULL), m_nLength(0)
+StringEx::StringEx(const char* pszParam) : charactor_string(NULL), charactor_string_length(0)
 {
-	SetString(pszParam);
+	SetCharString(pszParam);
 }
 
-CMyString::CMyString(CMyString&& rhs) : m_pszData(NULL), m_nLength(0)
+StringEx::StringEx(StringEx&& rhs) : charactor_string(NULL), charactor_string_length(0)
 {
-	cout << "CMyString 이동 생성자" << endl;
+	cout << "이동 생성자" << endl;
 
-	m_pszData = rhs.m_pszData;
-	m_nLength = rhs.m_nLength;
+	charactor_string = rhs.charactor_string;
+	charactor_string_length = rhs.charactor_string_length;
 
-	rhs.m_pszData = NULL;
-	rhs.m_nLength = 0;
+	rhs.charactor_string = NULL;
+	rhs.charactor_string_length = 0;
 }
 
-CMyString::~CMyString()
+StringEx::~StringEx()
 {
 	Release();
 }
 
-int CMyString::SetString(const char* pszParam)
+int StringEx::SetCharString(const char* pszParam)
 {
 	Release();
 	if (pszParam == NULL)
@@ -42,42 +42,42 @@ int CMyString::SetString(const char* pszParam)
 	if (nLength == 0)
 		return 0;
 
-	m_pszData = new char[nLength + 1];
+	charactor_string = new char[nLength + 1];
 
-	strcpy_s(m_pszData, sizeof(char) * (nLength + 1), pszParam);
-	m_nLength = nLength;
+	strcpy_s(charactor_string, sizeof(char) * (nLength + 1), pszParam);
+	charactor_string_length = nLength;
 
 	return nLength;
 }
 
-const char* CMyString::GetString() const
+const char* StringEx::GetCharString() const
 {
-	return m_pszData;
+	return charactor_string;
 }
 
-void CMyString::Release()
+void StringEx::Release()
 {
-	if (m_pszData != NULL)
-		delete[] m_pszData;
+	if (charactor_string != NULL)
+		delete[] charactor_string;
 
-	m_pszData = NULL;
-	m_nLength = 0;
+	charactor_string = NULL;
+	charactor_string_length = 0;
 }
 
-CMyString& CMyString::operator=(const CMyString& rhs)
+StringEx& StringEx::operator=(const StringEx& rhs)
 {
 	if (this != &rhs)
-		this->SetString(rhs.GetString());
+		this->SetCharString(rhs.GetCharString());
 
 	return *this;
 }
 
-int CMyString::GetLength() const
+int StringEx::GetCharStringLength() const
 {
-	return m_nLength;
+	return charactor_string_length;
 }
 
-int CMyString::Append(const char* pszParam)
+int StringEx::Append(const char* pszParam)
 {
 	if (pszParam == NULL)
 		return 0;
@@ -86,70 +86,70 @@ int CMyString::Append(const char* pszParam)
 	if (nLenParam == 0)
 		return 0;
 
-	if (m_pszData == NULL)
+	if (charactor_string == NULL)
 	{
-		SetString(pszParam);
-		return m_nLength;
+		SetCharString(pszParam);
+		return charactor_string_length;
 	}
 
-	int nLenCur = m_nLength;
+	int nLenCur = charactor_string_length;
 	char* pszResult = new char[nLenCur + nLenParam + 1];
 
-	strcpy_s(pszResult, sizeof(char) * (nLenCur + 1), m_pszData);
+	strcpy_s(pszResult, sizeof(char) * (nLenCur + 1), charactor_string);
 	strcpy_s(pszResult + (sizeof(char) * nLenCur), sizeof(char) * (nLenParam + 1), pszParam);
 
 	Release();
-	m_pszData = pszResult;
-	m_nLength = nLenCur + nLenParam;
+	charactor_string = pszResult;
+	charactor_string_length = nLenCur + nLenParam;
 
-	return m_nLength;
+	return charactor_string_length;
 }
 
-CMyString CMyString::operator+(const CMyString& rhs)
+StringEx StringEx::operator+(const StringEx& rhs)
 {
-	CMyString strResult(m_pszData);
-	strResult.Append(rhs.GetString());
+	StringEx strResult(charactor_string);
+	strResult.Append(rhs.GetCharString());
 
 	return strResult;
 }
 
-CMyString operator+(const char* pszParam, const CMyString& strParam)
+StringEx operator+(const char* pszParam, const StringEx& strParam)
 {
-	CMyString strResult(pszParam);
-	strResult.Append(strParam.m_pszData);
+	StringEx strResult(pszParam);
+	strResult.Append(strParam.charactor_string);
 
 	return strResult;
 }
 
-CMyString& CMyString::operator+=(const CMyString& rhs)
+StringEx& StringEx::operator+=(const StringEx& rhs)
 {
-	Append(rhs.GetString());
+	Append(rhs.GetCharString());
 	return *this;
 }
 
-char& CMyString::operator[](int nIndex)
+char& StringEx::operator[](int nIndex)
 {
-	return m_pszData[nIndex];
+	return charactor_string[nIndex];
 }
 
-char CMyString::operator[](int nIndex) const
+char StringEx::operator[](int nIndex) const
 {
-	return m_pszData[nIndex];
+	return charactor_string[nIndex];
 }
 
-int CMyString::operator==(const CMyString& rhs)
+int StringEx::operator==(const StringEx& rhs)
 {
-	if (m_pszData != NULL && rhs.m_pszData != NULL)
-		if (strcmp(m_pszData, rhs.m_pszData) == 0)
+	if (charactor_string != NULL && rhs.charactor_string != NULL)
+		if (strcmp(charactor_string, rhs.charactor_string) == 0)
 			return 1;
 
 	return 0;
 }
 
-int CMyString::operator!=(const CMyString& rhs)
+int StringEx::operator!=(const StringEx& rhs)
 {
-	if (m_pszData != NULL && rhs.m_pszData != NULL)
-		if (strcmp(m_pszData, rhs.m_pszData) == 0)
+	if (charactor_string != NULL && rhs.charactor_string != NULL)
+		if (strcmp(charactor_string, rhs.charactor_string) == 0)
 			return 0;
 
 	return 1;
