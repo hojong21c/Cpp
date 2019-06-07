@@ -19,15 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\CppProject\CppProject\main.cpp" />
-    <ClCompile Include="..\..\..\CppProject\CppProject\P1String.cpp" />
-    <ClCompile Include="..\..\..\CppProject\CppProject\P2String.cpp" />
-    <ClCompile Include="..\..\..\CppProject\CppProject\StringCtrlSample.cpp" />
+    <ClInclude Include="P1String.h" />
+    <ClInclude Include="P2String.h" />
+    <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\CppProject\CppProject\P1String.h" />
-    <ClInclude Include="..\..\..\CppProject\CppProject\P2String.h" />
-    <ClInclude Include="..\..\..\CppProject\CppProject\stdafx.h" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="P1String.cpp" />
+    <ClCompile Include="P2String.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
