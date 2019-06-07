@@ -38,4 +38,7 @@ public://연산자 함수
 
 	// OnSetString : 문자열 대체 함수 --> virtual
 	virtual void OnSetString(char* pszData, int nLength);
+
+	//friend 선언 -> private member 에 직접 접근
+	friend CMyString operator+(const char* pszParam, const CMyString& strParam);
 };

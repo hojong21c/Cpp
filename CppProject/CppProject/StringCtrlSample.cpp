@@ -3,9 +3,9 @@
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	CMyStringEx strTest;
-	strTest.SetString("∏€∏€¿Ã æ∆µÈ");
-	cout << strTest << endl;
+	CMyString b("World"), c;
+	c = "Hello" + b;
+	cout << c << endl;
 
 	return 0;
 }

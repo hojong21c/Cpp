@@ -18,7 +18,7 @@ CMyString::CMyString(const char* pszParam) : m_pszData(NULL), m_nLength(0)
 
 CMyString::CMyString(CMyString&& rhs) : m_pszData(NULL), m_nLength(0)
 {
-	cout << "CMyString 이동 생성자 호출" << endl;
+	cout << "CMyString 이동 생성자" << endl;
 
 	m_pszData = rhs.m_pszData;
 	m_nLength = rhs.m_nLength;
@@ -96,6 +96,14 @@ CMyString CMyString::operator+(const CMyString& rhs)
 	return strResult;
 }
 
+CMyString operator+(const char* pszParam, const CMyString& strParam)
+{
+	CMyString strResult(pszParam);
+	strResult.Append(strParam.m_pszData);
+
+	return strResult;
+}
+
 CMyString& CMyString::operator+=(const CMyString& rhs)
 {
 	Append(rhs.GetString());
@@ -130,7 +138,6 @@ int CMyString::operator!=(const CMyString& rhs)
 	return 1;
 }
 
-///////////Virtual
 void CMyString::OnSetString(char* pszData, int nLegnth)
 {
 
