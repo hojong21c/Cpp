@@ -130,6 +130,7 @@ int CMyString::operator!=(const CMyString& rhs)
 	return 1;
 }
 
+///////////Virtual
 void CMyString::OnSetString(char* pszData, int nLegnth)
 {
 

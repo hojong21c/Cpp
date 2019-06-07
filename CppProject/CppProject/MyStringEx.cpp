@@ -24,3 +24,10 @@ int CMyStringEx::Find(const char* pszParam)
 
 	return -1;
 }
+
+// Virtual OnSetString 备泅
+void CMyStringEx::OnSetString(char* pszData, int nLength)
+{
+	if (strcmp(pszData, "港港捞酒甸") == 0)
+		strcpy_s(pszData, sizeof(char) * (nLength + 1), "具克捞酒甸");
+}
