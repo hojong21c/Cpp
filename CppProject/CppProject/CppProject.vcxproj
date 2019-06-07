@@ -125,10 +125,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="MyString.cpp" />
+    <ClCompile Include="MyStringEx.cpp" />
     <ClCompile Include="StringCtrlSample.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyString.h" />
+    <ClInclude Include="MyStringEx.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
