@@ -32,23 +32,6 @@ CMyString::~CMyString()
 	Release();
 }
 
-int CMyString::SetString(const char* pszParam) 
-{
-	Release();
-	if (pszParam == NULL)
-		return 0;
-
-	int nLength = strlen(pszParam);
-	if (nLength == 0)
-		return 0;
-
-	m_pszData = new char[nLength + 1];
-
-	strcpy_s(m_pszData, sizeof(char) * (nLength + 1), pszParam);
-	m_nLength = nLength;
-
-	return nLength;
-}
 
 const char* CMyString::GetString() const
 {
@@ -96,7 +79,7 @@ int CMyString::Append(const char* pszParam)
 	char* pszResult = new char[nLenCur + nLenParam + 1];
 
 	strcpy_s(pszResult, sizeof(char) * (nLenCur + 1), m_pszData);
-	strcpy_s(pszResult + (sizeof(char) * nLenCur), sizeof(char) *(nLenParam +1), pszParam);
+	strcpy_s(pszResult + (sizeof(char) * nLenCur), sizeof(char) * (nLenParam + 1), pszParam);
 
 	Release();
 	m_pszData = pszResult;
@@ -145,4 +128,30 @@ int CMyString::operator!=(const CMyString& rhs)
 			return 0;
 
 	return 1;
+}
+
+void CMyString::OnSetString(char* pszData, int nLegnth)
+{
+
+}
+
+int CMyString::SetString(const char* pszParam)
+{
+	Release();
+
+	if (pszParam == NULL)
+		return 0;
+
+	int nLength = strlen(pszParam);
+	if (nLength == 0)
+		return 0;
+
+	m_pszData = new char[nLength + 1];
+
+	strcpy_s(m_pszData, sizeof(char) * (nLength + 1), pszParam);
+	m_nLength = nLength;
+
+	OnSetString(m_pszData, m_nLength);
+
+	return nLength;
 }

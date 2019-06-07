@@ -1,16 +1,11 @@
 #include "stdafx.h"
 #include "MyStringEx.h"
 
-//Å×½ºÆ® ÇÔ¼ö
-void TestFunc(const CMyString& strParam)
-{
-	cout << strParam << endl;
-}
-
 int _tmain(int argc, _TCHAR* argv[])
 {
-	CMyStringEx strLeft("Hello"), strRight("World");
-	cout << strLeft + strRight << endl;
+	CMyStringEx strTest;
+	strTest.SetString("¸Û¸ÛÀÌ ¾Æµé");
+	cout << strTest << endl;
 
 	return 0;
 }
