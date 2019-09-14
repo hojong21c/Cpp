@@ -13,135 +13,162 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\Examples">
+      <UniqueIdentifier>{dbf8141b-dc35-4ac2-ac2b-9b7173269bbd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\AddressBook_OOP1">
+      <UniqueIdentifier>{d717ad59-00a1-49b8-a113-8ad744c57c3e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="UserData.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MyList.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInterface.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Lambda_Sort.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Multi_Catch.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Multi_Inheritance.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Pure_Virtual.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="SelectConstructor.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Shared_Ptr.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Shared_Ptr_Array.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Static_Cast.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="STL_String.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="STL_Vector.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Template_Function_Specialization.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Template_Member_Declairation_Definition.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Template_Parameter.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Unique_Ptr.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Virtual_Destructor.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Virtual_Function.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Virtual_Table.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="Aggregation_Relationship.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Examples</Filter>
     </ClCompile>
     <ClCompile Include="Auto_Pointer.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Examples</Filter>
     </ClCompile>
     <ClCompile Include="AutoPtr_Shallow_Copy.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Examples</Filter>
     </ClCompile>
     <ClCompile Include="Class_Template.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Examples</Filter>
     </ClCompile>
     <ClCompile Include="Class_Template_Array.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Examples</Filter>
     </ClCompile>
     <ClCompile Include="Class_Template_Specialization.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Examples</Filter>
     </ClCompile>
     <ClCompile Include="Composition_Relation.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Examples</Filter>
     </ClCompile>
     <ClCompile Include="Dynamic_Cast.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Examples</Filter>
     </ClCompile>
     <ClCompile Include="Except_Allocation.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Examples</Filter>
     </ClCompile>
     <ClCompile Include="Except_Case1.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Examples</Filter>
     </ClCompile>
     <ClCompile Include="Except_Case2.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Examples</Filter>
     </ClCompile>
     <ClCompile Include="Except_Case3.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Examples</Filter>
     </ClCompile>
     <ClCompile Include="Except_Class.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Examples</Filter>
     </ClCompile>
     <ClCompile Include="Except_Stack.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Examples</Filter>
     </ClCompile>
     <ClCompile Include="Friend_Class.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Examples</Filter>
     </ClCompile>
     <ClCompile Include="Friend_Function.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Examples</Filter>
     </ClCompile>
     <ClCompile Include="Function_Object.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Examples</Filter>
     </ClCompile>
     <ClCompile Include="Function_Object_Sort.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Examples</Filter>
     </ClCompile>
     <ClCompile Include="Inherit_Of_Operator_Overloading.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Examples</Filter>
     </ClCompile>
     <ClCompile Include="Interface.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Examples</Filter>
     </ClCompile>
     <ClCompile Include="Interface_Multiple_Inheritance.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Examples</Filter>
     </ClCompile>
     <ClCompile Include="Lambda.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Examples</Filter>
     </ClCompile>
     <ClCompile Include="Lambda_Capture.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Examples</Filter>
     </ClCompile>
     <ClCompile Include="Lambda_Functional.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Examples</Filter>
+    </ClCompile>
+    <ClCompile Include="Lambda_Sort.cpp">
+      <Filter>소스 파일\Examples</Filter>
+    </ClCompile>
+    <ClCompile Include="Multi_Catch.cpp">
+      <Filter>소스 파일\Examples</Filter>
+    </ClCompile>
+    <ClCompile Include="Multi_Inheritance.cpp">
+      <Filter>소스 파일\Examples</Filter>
+    </ClCompile>
+    <ClCompile Include="Pure_Virtual.cpp">
+      <Filter>소스 파일\Examples</Filter>
+    </ClCompile>
+    <ClCompile Include="SelectConstructor.cpp">
+      <Filter>소스 파일\Examples</Filter>
+    </ClCompile>
+    <ClCompile Include="Shared_Ptr.cpp">
+      <Filter>소스 파일\Examples</Filter>
+    </ClCompile>
+    <ClCompile Include="Shared_Ptr_Array.cpp">
+      <Filter>소스 파일\Examples</Filter>
+    </ClCompile>
+    <ClCompile Include="Static_Cast.cpp">
+      <Filter>소스 파일\Examples</Filter>
+    </ClCompile>
+    <ClCompile Include="STL_String.cpp">
+      <Filter>소스 파일\Examples</Filter>
+    </ClCompile>
+    <ClCompile Include="STL_Vector.cpp">
+      <Filter>소스 파일\Examples</Filter>
+    </ClCompile>
+    <ClCompile Include="Template_Function_Specialization.cpp">
+      <Filter>소스 파일\Examples</Filter>
+    </ClCompile>
+    <ClCompile Include="Template_Member_Declairation_Definition.cpp">
+      <Filter>소스 파일\Examples</Filter>
+    </ClCompile>
+    <ClCompile Include="Template_Parameter.cpp">
+      <Filter>소스 파일\Examples</Filter>
+    </ClCompile>
+    <ClCompile Include="Unique_Ptr.cpp">
+      <Filter>소스 파일\Examples</Filter>
+    </ClCompile>
+    <ClCompile Include="Virtual_Destructor.cpp">
+      <Filter>소스 파일\Examples</Filter>
+    </ClCompile>
+    <ClCompile Include="Virtual_Function.cpp">
+      <Filter>소스 파일\Examples</Filter>
+    </ClCompile>
+    <ClCompile Include="Virtual_Table.cpp">
+      <Filter>소스 파일\Examples</Filter>
+    </ClCompile>
+    <ClCompile Include="UserData.cpp">
+      <Filter>소스 파일\AddressBook_OOP1</Filter>
+    </ClCompile>
+    <ClCompile Include="MyList.cpp">
+      <Filter>소스 파일\AddressBook_OOP1</Filter>
+    </ClCompile>
+    <ClCompile Include="UserInterface.cpp">
+      <Filter>소스 파일\AddressBook_OOP1</Filter>
+    </ClCompile>
+    <ClCompile Include="AddressBook_OOP.cpp">
+      <Filter>소스 파일\AddressBook_OOP1</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
