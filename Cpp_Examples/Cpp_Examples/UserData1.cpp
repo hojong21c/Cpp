@@ -1,9 +1,9 @@
 #include "stdafx.h"
-#include "UserData.h"
+#include "UserData1.h"
 
-int CUserData::nUserDataCounter = 0;
+int CUserData1::nUserDataCounter = 0;
 
-CUserData::CUserData(void):pNext(NULL)
+CUserData1::CUserData1(void):pNext(NULL)
 {
 	memset(szName, 0, sizeof(szName));
 	memset(szPhone, 0, sizeof(szPhone));
@@ -11,7 +11,7 @@ CUserData::CUserData(void):pNext(NULL)
 	nUserDataCounter++;
 }
 
-CUserData::~CUserData()
+CUserData1::~CUserData1()
 {
 	nUserDataCounter--;
 }

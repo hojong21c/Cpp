@@ -123,15 +123,46 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="MyList.h" />
-    <ClInclude Include="stdafx.h" />
-    <ClInclude Include="UserData.h" />
-    <ClInclude Include="UserInterface.h" />
+    <ClInclude Include="MyList1.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Mylist2.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="MyNode.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="UserData1.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="UserData2.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="UserInterface1.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="UserInterface2.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AddressBook_OOP.cpp" />
-    <ClCompile Include="MyList.cpp" />
-    <ClCompile Include="UserData.cpp" />
+    <ClCompile Include="AddressBook_OOP1.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="AddressBook_OOP2.cpp" />
+    <ClCompile Include="MyList1.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="MyList2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="MyNode.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="UserData1.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="Aggregation_Relationship.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -246,7 +277,13 @@
     <ClCompile Include="Unique_Ptr.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="UserInterface.cpp" />
+    <ClCompile Include="UserData2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="UserInterface1.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="UserInterface2.cpp" />
     <ClCompile Include="Virtual_Destructor.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>

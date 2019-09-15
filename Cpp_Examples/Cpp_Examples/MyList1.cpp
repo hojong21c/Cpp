@@ -1,22 +1,22 @@
 #include "stdafx.h"
-#include "MyList.h"
+#include "MyList1.h"
 
-CMyList::CMyList(void)
+CMyList1::CMyList1(void)
 {
 }
-CMyList::~CMyList(void)
+CMyList1::~CMyList1(void)
 {
 	ReleaseList();
 }
 
-int CMyList::AddNewNode(const char* pszName, const char* pszPhone)
+int CMyList1::AddNewNode(const char* pszName, const char* pszPhone)
 {
-	CUserData* pNewUser = NULL;
+	CUserData1* pNewUser = NULL;
 
 	if (FindNode(pszName) != NULL)
 		return 0;
 
-	pNewUser = new CUserData;
+	pNewUser = new CUserData1;
 	strcpy_s(pNewUser->szName, sizeof(pNewUser->szName), pszName);
 	strcpy_s(pNewUser->szPhone, sizeof(pNewUser->szPhone), pszPhone);
 	pNewUser->pNext = NULL;
@@ -27,9 +27,9 @@ int CMyList::AddNewNode(const char* pszName, const char* pszPhone)
 	return 1;
 }
 
-void CMyList::PrintAll(void)
+void CMyList1::PrintAll(void)
 {
-	CUserData* pTmp = m_Head.pNext;
+	CUserData1* pTmp = m_Head.pNext;
 
 	while (pTmp != NULL)
 	{
@@ -38,12 +38,12 @@ void CMyList::PrintAll(void)
 		pTmp = pTmp->pNext;
 	}
 
-	printf("CUserData Counter : %d\n", CUserData::GetUserDataCounter());
+	printf("CUserData1 Counter : %d\n", CUserData1::GetUserDataCounter());
 }
 
-CUserData* CMyList::FindNode(const char* pszName)
+CUserData1* CMyList1::FindNode(const char* pszName)
 {
-	CUserData* pTmp = m_Head.pNext;
+	CUserData1* pTmp = m_Head.pNext;
 	while (pTmp != NULL)
 	{
 		if (strcmp(pTmp->szName, pszName) == 0)
@@ -56,10 +56,10 @@ CUserData* CMyList::FindNode(const char* pszName)
 }
 
 
-int CMyList::RemoveNode(const char* pszName)
+int CMyList1::RemoveNode(const char* pszName)
 {
-	CUserData* pPrevNode = &m_Head;
-	CUserData* pDelete = NULL;
+	CUserData1* pPrevNode = &m_Head;
+	CUserData1* pDelete = NULL;
 
 	while (pPrevNode->pNext != NULL)
 	{
@@ -78,10 +78,10 @@ int CMyList::RemoveNode(const char* pszName)
 	return 0;
 }
 
-void CMyList::ReleaseList(void)
+void CMyList1::ReleaseList(void)
 {
-	CUserData* pTmp = m_Head.pNext;
-	CUserData* pDelete = NULL;
+	CUserData1* pTmp = m_Head.pNext;
+	CUserData1* pDelete = NULL;
 
 	while (pTmp != NULL)
 	{

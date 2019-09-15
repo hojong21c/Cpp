@@ -4,12 +4,12 @@ using namespace std;
 
 /*
 	Aggregation 관계
-	- CMyUI 클래스의 인스턴스가 선언될 때 CMyList 클래스의 인스턴스가 참조로 전달
+	- CMyUI 클래스의 인스턴스가 선언될 때 CMyList1 클래스의 인스턴스가 참조로 전달
 */
 
 class CNode
 {
-	friend class CMyList;
+	friend class CMyList1;
 
 public:
 	explicit CNode(const char* pszName)
@@ -22,11 +22,11 @@ private:
 	CNode* pNext = nullptr;
 };
 
-class CMyList
+class CMyList1
 {
 public:
-	CMyList() : m_HeadNode("Dummy Head") {}
-	~CMyList()
+	CMyList1() : m_HeadNode("Dummy Head") {}
+	~CMyList1()
 	{
 		CNode* pNode = m_HeadNode.pNext;
 		CNode* pDelete = nullptr;
@@ -63,7 +63,7 @@ private:
 class CMyUI
 {
 public:
-	CMyUI(CMyList &rList) : m_list(rList){}
+	CMyUI(CMyList1 &rList) : m_list(rList){}
 	int PrintMenu()
 	{
 		system("cls");
@@ -98,12 +98,12 @@ public:
 	}
 
 private:
-	CMyList &m_list;
+	CMyList1 &m_list;
 };
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	CMyList list;
+	CMyList1 list;
 	CMyUI ui(list);
 	ui.Run();
 

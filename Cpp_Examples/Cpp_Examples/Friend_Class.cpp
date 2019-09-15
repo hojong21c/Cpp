@@ -3,13 +3,13 @@
 using namespace std;
 
 /*
-	CMyList 클래스를 CNode 클래스의 friend 클래스로 선언
-	CMyList 는 CNode 클래스의 private 멤버들에 직접 접근이 가능하다.
+	CMyList1 클래스를 CNode 클래스의 friend 클래스로 선언
+	CMyList1 는 CNode 클래스의 private 멤버들에 직접 접근이 가능하다.
 */
 
 class CNode
 {
-	friend class CMyList;
+	friend class CMyList1;
 
 public:
 	explicit CNode(const char* pszName)
@@ -22,11 +22,11 @@ private:
 	CNode* pNext = nullptr;
 };
 
-class CMyList
+class CMyList1
 {
 public:
-	CMyList() : m_HeadNode("Dummy Head"){}
-	~CMyList()
+	CMyList1() : m_HeadNode("Dummy Head"){}
+	~CMyList1()
 	{
 		CNode* pNode = m_HeadNode.pNext;
 		CNode* pDelete = nullptr;
@@ -57,7 +57,7 @@ private:
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	CMyList list;
+	CMyList1 list;
 	list.AddNewNode("길동");
 	list.AddNewNode("철수");
 	list.AddNewNode("영희");

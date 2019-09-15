@@ -4,13 +4,13 @@ using namespace std;
 
 /*
 	Composition (집합) 관계
-	- CMyUI 클래스의 인스턴스가 생성되면 CMyList클래스의 인스턴스도 같이 생성됨.
-	- 반대로 CMyUI 클래스 인스턴스가 소멸하면 CMyList 클래스의 인스턴스도 소멸함.
+	- CMyUI 클래스의 인스턴스가 생성되면 CMyList1클래스의 인스턴스도 같이 생성됨.
+	- 반대로 CMyUI 클래스 인스턴스가 소멸하면 CMyList1 클래스의 인스턴스도 소멸함.
 */
 
 class CNode
 {
-	friend class CMyList;
+	friend class CMyList1;
 
 public:
 	explicit CNode(const char* pszName)
@@ -23,11 +23,11 @@ private:
 	CNode* pNext = nullptr;
 };
 
-class CMyList
+class CMyList1
 {
 public:
-	CMyList() : m_HeadNode("Dummy Head"){}
-	~CMyList()
+	CMyList1() : m_HeadNode("Dummy Head"){}
+	~CMyList1()
 	{
 		CNode* pNode = m_HeadNode.pNext;
 		CNode* pDelete = nullptr;
@@ -98,7 +98,7 @@ public:
 	}
 
 private:
-	CMyList m_list;
+	CMyList1 m_list;
 };
 
 int _tmain(int argc, _TCHAR* argv[])

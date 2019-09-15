@@ -19,19 +19,34 @@
     <Filter Include="소스 파일\AddressBook_OOP1">
       <UniqueIdentifier>{d717ad59-00a1-49b8-a113-8ad744c57c3e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\AddressBook_OOP2">
+      <UniqueIdentifier>{47f091c2-9364-418b-8af6-dcaaef7ef6ad}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="MyNode.h">
+      <Filter>소스 파일\AddressBook_OOP2</Filter>
+    </ClInclude>
+    <ClInclude Include="UserData2.h">
+      <Filter>소스 파일\AddressBook_OOP2</Filter>
+    </ClInclude>
+    <ClInclude Include="UserData1.h">
+      <Filter>소스 파일\AddressBook_OOP1</Filter>
+    </ClInclude>
+    <ClInclude Include="MyList1.h">
+      <Filter>소스 파일\AddressBook_OOP1</Filter>
+    </ClInclude>
+    <ClInclude Include="Mylist2.h">
+      <Filter>소스 파일\AddressBook_OOP2</Filter>
+    </ClInclude>
     <ClInclude Include="stdafx.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="UserData.h">
-      <Filter>헤더 파일</Filter>
+    <ClInclude Include="UserInterface1.h">
+      <Filter>소스 파일\AddressBook_OOP1</Filter>
     </ClInclude>
-    <ClInclude Include="MyList.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="UserInterface.h">
-      <Filter>헤더 파일</Filter>
+    <ClInclude Include="UserInterface2.h">
+      <Filter>소스 파일\AddressBook_OOP2</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -158,17 +173,32 @@
     <ClCompile Include="Virtual_Table.cpp">
       <Filter>소스 파일\Examples</Filter>
     </ClCompile>
-    <ClCompile Include="UserData.cpp">
+    <ClCompile Include="MyNode.cpp">
+      <Filter>소스 파일\AddressBook_OOP2</Filter>
+    </ClCompile>
+    <ClCompile Include="UserData1.cpp">
       <Filter>소스 파일\AddressBook_OOP1</Filter>
     </ClCompile>
-    <ClCompile Include="MyList.cpp">
+    <ClCompile Include="UserData2.cpp">
+      <Filter>소스 파일\AddressBook_OOP2</Filter>
+    </ClCompile>
+    <ClCompile Include="MyList1.cpp">
       <Filter>소스 파일\AddressBook_OOP1</Filter>
     </ClCompile>
-    <ClCompile Include="UserInterface.cpp">
+    <ClCompile Include="MyList2.cpp">
+      <Filter>소스 파일\AddressBook_OOP2</Filter>
+    </ClCompile>
+    <ClCompile Include="AddressBook_OOP2.cpp">
+      <Filter>소스 파일\AddressBook_OOP2</Filter>
+    </ClCompile>
+    <ClCompile Include="AddressBook_OOP1.cpp">
       <Filter>소스 파일\AddressBook_OOP1</Filter>
     </ClCompile>
-    <ClCompile Include="AddressBook_OOP.cpp">
+    <ClCompile Include="UserInterface1.cpp">
       <Filter>소스 파일\AddressBook_OOP1</Filter>
+    </ClCompile>
+    <ClCompile Include="UserInterface2.cpp">
+      <Filter>소스 파일\AddressBook_OOP2</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
