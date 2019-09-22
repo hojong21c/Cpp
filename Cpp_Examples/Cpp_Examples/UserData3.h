@@ -1,13 +1,13 @@
 #pragma once
-#include "MyNode2.h"
+#include "MyNode3.h"
 
 // CMyNode 클래스의 파생 클래스로 변경
-class CUserData2 : public CMyNode2
+class CUserData3 : public CMyNode3
 {
 public:
-	CUserData2(void);
-	CUserData2(const char* pszName, const char* pszPhone);
-	~CUserData2(void);
+	CUserData3(void);
+	CUserData3(const char* pszName, const char* pszPhone);
+	~CUserData3(void);
 
 	const char* GetName(void) const { return szName; }
 	const char* GetPhone(void) const { return szPhone; }

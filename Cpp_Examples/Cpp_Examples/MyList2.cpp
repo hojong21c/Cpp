@@ -2,7 +2,7 @@
 #include "MyList2.h"
 #include "UserData2.h"
 
-CMyList2::CMyList2(CMyNode* pHead)
+CMyList2::CMyList2(CMyNode2* pHead)
 {
 	// LoadList() 함수 코드 참고
 	m_pHead = pHead;
@@ -15,9 +15,9 @@ CMyList2::~CMyList2(void)
 }
 
 
-CMyNode* CMyList2::FindNode(const char* pszKey)
+CMyNode2* CMyList2::FindNode(const char* pszKey)
 {
-	CMyNode* pTmp = m_pHead->pNext;
+	CMyNode2* pTmp = m_pHead->pNext;
 
 	while (pTmp != NULL)
 	{
@@ -32,8 +32,8 @@ CMyNode* CMyList2::FindNode(const char* pszKey)
 
 int CMyList2::RemoveNode(const char* pszKey)
 {
-	CMyNode* pPrevNode = m_pHead;
-	CMyNode* pDelete = NULL;
+	CMyNode2* pPrevNode = m_pHead;
+	CMyNode2* pDelete = NULL;
 
 	while (pPrevNode->pNext != NULL)
 	{
@@ -55,8 +55,8 @@ int CMyList2::RemoveNode(const char* pszKey)
 
 void CMyList2::ReleaseList(void)
 {
-	CMyNode* pTmp = m_pHead;
-	CMyNode* pDelete = NULL;
+	CMyNode2* pTmp = m_pHead;
+	CMyNode2* pDelete = NULL;
 
 	while (pTmp != NULL)
 	{
@@ -70,12 +70,11 @@ void CMyList2::ReleaseList(void)
 }
 
 
-int CMyList2::AddNewNode(CMyNode* pNewNode)
+int CMyList2::AddNewNode(CMyNode2* pNewNode)
 {
 	if (FindNode(pNewNode->GetKey()) != NULL)
 	{
 		delete pNewNode;
-
 		return 0;
 	}
 	pNewNode->pNext = m_pHead->pNext;
@@ -86,7 +85,7 @@ int CMyList2::AddNewNode(CMyNode* pNewNode)
 
 void CMyList2::PrintAll(void)
 {
-	CMyNode* pTmp = m_pHead->pNext;
+	CMyNode2* pTmp = m_pHead->pNext;
 
 	while (pTmp != NULL)
 	{

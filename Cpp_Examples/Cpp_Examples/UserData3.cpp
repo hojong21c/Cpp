@@ -1,21 +1,21 @@
 #include "stdafx.h"
-#include "UserData2.h"
+#include "UserData3.h"
 
-int CUserData2::nUserDataCounter = 0;
+int CUserData3::nUserDataCounter = 0;
 
-CUserData2::CUserData2(void) /* : pNext(NULL)*/
+CUserData3::CUserData3(void) /* : pNext(NULL)*/
 {
 	memset(szName, 0, sizeof(szName));
 	memset(szPhone, 0, sizeof(szPhone));
 	nUserDataCounter++;
 }
 
-CUserData2::~CUserData2(void)
+CUserData3::~CUserData3(void)
 {
 	nUserDataCounter--;
 }
 
-CUserData2::CUserData2(const char* pszName, const char* pszPhone)
+CUserData3::CUserData3(const char* pszName, const char* pszPhone)
 {
 	memset(szName, 0, sizeof(szName));
 	memset(szPhone, 0, sizeof(szPhone));
@@ -26,12 +26,12 @@ CUserData2::CUserData2(const char* pszName, const char* pszPhone)
 	nUserDataCounter++;
 }
 
-const char* CUserData2::GetKey(void)
+const char* CUserData3::GetKey(void)
 {
 	return szName;
 }
 
-void CUserData2::PrintNode(void)
+void CUserData3::PrintNode(void)
 {
 #ifdef _DEBUG
 	printf("[%p] %s\t%s [%p]\n", this, szName, szPhone, GetNext());

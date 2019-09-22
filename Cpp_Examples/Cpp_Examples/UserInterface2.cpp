@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "UserInterface2.h"
 #include "MyList2.h"
+#include "UserData2.h"
 
 CUserInterface2::CUserInterface2(CMyList2& rList) : m_List(rList)
 {
@@ -21,7 +22,8 @@ void CUserInterface2::Add(void)
 	cin >> szName;
 	cout << "Input phone number : " << endl;
 	cin >> szPhone;
-	m_List.AddNewNode(szName, szPhone);
+	
+	m_List.AddNewNode(new CUserData2(szName, szPhone));
 }
 
 int CUserInterface2::PrintUI(void)
@@ -37,17 +39,21 @@ int CUserInterface2::PrintUI(void)
 void CUserInterface2::Search(void)
 {
 	char szName[32] = { 0 };
-	CUserData2* pNode = NULL;
+	CUserData2* pUserData;
 
 	printf("Input name : ");
 	fflush(stdin);
-	gets_s(szName, sizeof(szName));
+	cin >> szName;
+	
 
-	pNode = m_List.FindNode(szName);
+	//Have to Fix////////////////////////////////////
+	pUserData = (CUserData2*)m_List.FindNode(szName);
+	/////////////////////////////////////////////////
 
-	if (pNode != NULL)
+
+	if (pUserData != NULL)
 	{
-		printf("[%p] %s\t%s [%p] \n", pNode, pNode->GetName(), pNode->GetPhone(), pNode->GetNext());
+		printf("[%p] %s\t%s [%p] \n", pUserData, pUserData->GetName(), pUserData->GetPhone(), pUserData->GetNext());
 	}
 	else
 		puts("ERROR: 데이터를 찾을 수 없습니다.");

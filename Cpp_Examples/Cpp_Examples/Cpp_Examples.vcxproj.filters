@@ -22,31 +22,49 @@
     <Filter Include="소스 파일\AddressBook_OOP2">
       <UniqueIdentifier>{47f091c2-9364-418b-8af6-dcaaef7ef6ad}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\AddressBook_OOP3">
+      <UniqueIdentifier>{fa1de60a-d2d8-4652-9b47-ad363ad52ab7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MyNode.h">
-      <Filter>소스 파일\AddressBook_OOP2</Filter>
-    </ClInclude>
-    <ClInclude Include="UserData2.h">
-      <Filter>소스 파일\AddressBook_OOP2</Filter>
-    </ClInclude>
-    <ClInclude Include="UserData1.h">
-      <Filter>소스 파일\AddressBook_OOP1</Filter>
-    </ClInclude>
-    <ClInclude Include="MyList1.h">
-      <Filter>소스 파일\AddressBook_OOP1</Filter>
-    </ClInclude>
-    <ClInclude Include="Mylist2.h">
-      <Filter>소스 파일\AddressBook_OOP2</Filter>
-    </ClInclude>
     <ClInclude Include="stdafx.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="MyNode3.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInterface3.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MyNode2.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="UserData2.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Mylist2.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MyList1.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="UserData1.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
     <ClInclude Include="UserInterface1.h">
-      <Filter>소스 파일\AddressBook_OOP1</Filter>
+      <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="UserInterface2.h">
-      <Filter>소스 파일\AddressBook_OOP2</Filter>
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MyIterator.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MyList3.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="UserData3.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -173,9 +191,6 @@
     <ClCompile Include="Virtual_Table.cpp">
       <Filter>소스 파일\Examples</Filter>
     </ClCompile>
-    <ClCompile Include="MyNode.cpp">
-      <Filter>소스 파일\AddressBook_OOP2</Filter>
-    </ClCompile>
     <ClCompile Include="UserData1.cpp">
       <Filter>소스 파일\AddressBook_OOP1</Filter>
     </ClCompile>
@@ -199,6 +214,27 @@
     </ClCompile>
     <ClCompile Include="UserInterface2.cpp">
       <Filter>소스 파일\AddressBook_OOP2</Filter>
+    </ClCompile>
+    <ClCompile Include="MyIterator.cpp">
+      <Filter>소스 파일\AddressBook_OOP3</Filter>
+    </ClCompile>
+    <ClCompile Include="AddressBook_OOP.cpp">
+      <Filter>소스 파일\AddressBook_OOP3</Filter>
+    </ClCompile>
+    <ClCompile Include="MyList3.cpp">
+      <Filter>소스 파일\AddressBook_OOP3</Filter>
+    </ClCompile>
+    <ClCompile Include="UserData3.cpp">
+      <Filter>소스 파일\AddressBook_OOP3</Filter>
+    </ClCompile>
+    <ClCompile Include="MyNode2.cpp">
+      <Filter>소스 파일\AddressBook_OOP2</Filter>
+    </ClCompile>
+    <ClCompile Include="MyNode3.cpp">
+      <Filter>소스 파일\AddressBook_OOP3</Filter>
+    </ClCompile>
+    <ClCompile Include="UserInterafce3.cpp">
+      <Filter>소스 파일\AddressBook_OOP3</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
